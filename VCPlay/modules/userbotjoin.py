@@ -3,10 +3,10 @@ from pyrogram import Client
 from pyrogram import filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
-from VCPlayBot.helpers.decorators import authorized_users_only
-from VCPlayBot.helpers.decorators import errors
-from VCPlayBot.services.callsmusic import client as USER
-from VCPlayBot.config import SUDO_USERS
+from VCPlay.helpers.decorators import authorized_users_only
+from VCPlay.helpers.decorators import errors
+from VCPlay.services.callsmusic import client as USER
+from VCPlay.config import SUDO_USERS
 
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
